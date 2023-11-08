@@ -65,7 +65,7 @@ class LoginView extends GetView<LoginController> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+              const  SizedBox(height: 20,),
                 ElevatedButton(
                   style: const ButtonStyle(
                     backgroundColor:MaterialStatePropertyAll(Color.fromARGB(255, 111, 255, 60)),
