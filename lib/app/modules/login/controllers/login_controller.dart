@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kasir_warjo/app/routes/app_pages.dart';
 
 class LoginController extends GetxController {
   TextEditingController userC = TextEditingController();
@@ -13,7 +14,7 @@ class LoginController extends GetxController {
   }
   void checkPass(){
     if(userC.text ==corrUser && passC.text == corrPass){
-      Get.offNamed('/home');
+      Get.offAllNamed( Routes.HOME);
     }else{
       Get.snackbar('Error', 'Username atau Password salah',backgroundColor: Colors.red);
     }

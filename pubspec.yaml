@@ -7,9 +7,11 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
-  get: 4.6.6
   flutter:
     sdk: flutter
+  get: 4.6.6
+  introduction_screen: ^3.1.12
+  lottie: ^2.7.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -20,3 +22,4 @@ flutter:
   uses-material-design: true
   assets:
     - lib/assets/images/warjo.png
+    - lib/assets/lotties/Login.json
