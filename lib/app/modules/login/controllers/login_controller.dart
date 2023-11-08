@@ -1,23 +1,21 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
+  TextEditingController userC = TextEditingController();
+  TextEditingController passC = TextEditingController();
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  RxBool isHidden = true.obs;
+  String corrUser = 'naufal';
+  String corrPass = 'warjo';
+  void tapped() {
+    isHidden.toggle();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
+  void checkPass(){
+    if(userC.text ==corrUser && passC.text == corrPass){
+      Get.offNamed('/home');
+    }else{
+      Get.snackbar('Error', 'Username atau Password salah',backgroundColor: Colors.red);
+    }
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
