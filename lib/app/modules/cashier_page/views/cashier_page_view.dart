@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import '../controllers/home_controller.dart';
+
+import '../controllers/cashier_page_controller.dart';
 import '../../../routes/app_pages.dart';
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+class CashierPageView extends GetView<CashierPageController> {
+  const CashierPageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: ConvexAppBar(
+      appBar: AppBar(
+        title: const Text('CashierPageView'),
+        centerTitle: true,
+      ),
+       bottomNavigationBar: ConvexAppBar(
           items: [
             TabItem(icon: Icons.home, title: 'Home'),
             TabItem(icon: Icons.inventory_2_outlined, title: 'Catalog'),
@@ -17,7 +22,7 @@ class HomeView extends GetView<HomeController> {
             TabItem(icon: Icons.text_snippet_outlined, title: 'Order'),
             TabItem(icon: Icons.compare_arrows_sharp, title: 'Transaction'),
           ],
-          initialActiveIndex: 0,
+          initialActiveIndex: 2,
           onTap: (index) {
            
             switch (index) {
@@ -38,13 +43,9 @@ class HomeView extends GetView<HomeController> {
                 break;
             }
           }),
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
       body: const Center(
         child: Text(
-          'HomeView is working',
+          'CashierPageView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
