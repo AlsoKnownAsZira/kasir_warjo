@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 import 'package:kasir_warjo/app/widgets/custom_navigation_bar.dart';
 
 import '../controllers/cashier_page_controller.dart';
-import '../../../routes/app_pages.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 class CashierPageView extends GetView<CashierPageController> {
   const CashierPageView({Key? key}) : super(key: key);
   @override

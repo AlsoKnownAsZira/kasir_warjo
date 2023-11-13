@@ -4,9 +4,7 @@ import 'package:get/get.dart';
 import 'package:kasir_warjo/app/widgets/custom_navigation_bar.dart';
 
 import '../controllers/transaction_page_controller.dart';
-import 'package:get/get.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import '../../../routes/app_pages.dart';
+
 class TransactionPageView extends GetView<TransactionPageController> {
   const TransactionPageView({Key? key}) : super(key: key);
   @override
