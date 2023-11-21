@@ -11,8 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
   get: 4.6.6
+  intl: ^0.18.1
   introduction_screen: ^3.1.12
   lottie: ^2.7.0
+  syncfusion_flutter_charts: ^23.2.4
 
 dev_dependencies:
   flutter_lints: ^2.0.0
