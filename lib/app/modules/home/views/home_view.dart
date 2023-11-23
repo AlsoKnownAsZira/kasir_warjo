@@ -94,7 +94,7 @@ class HomeView extends GetView<HomeController> {
                       Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: Text(
-                          "Brilyan Satria",
+                          "M NAUFAL SYAHANDRA",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
@@ -106,7 +106,7 @@ class HomeView extends GetView<HomeController> {
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
-                              color: Colors.grey),
+                              color: Color.fromARGB(255, 185, 185, 185)),
                         ),
                       ),
                       Divider(
@@ -158,7 +158,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               Padding(
@@ -215,7 +215,7 @@ class HomeView extends GetView<HomeController> {
                     Container(
                       width: double.infinity,
                       height: 400,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                       ),
                       child: Column(
@@ -228,10 +228,10 @@ class HomeView extends GetView<HomeController> {
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Color.fromARGB(255, 192, 190, 190),
+                                color: const Color.fromARGB(255, 192, 190, 190),
                               ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              child: const Padding(
+                                padding:  EdgeInsets.all(8.0),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
