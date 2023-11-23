@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:kasir_warjo/app/modules/catalog_page/views/catalog_detail.dart';
 
 class CatalogItem {
   final String image;
@@ -24,13 +25,24 @@ class CatalogGrid extends StatelessWidget {
       ),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return GridTile(
-          footer: GridTileBar(
-            backgroundColor: Colors.black54.withOpacity(0.3),
-            title: Text(items[index].title),
-            subtitle: Text('Rp${items[index].price}'),
+        return GestureDetector(
+          onTap: () {
+           
+               Get.to(() => CatalogDetail(item: items[index]));
+           
+            // Handle your tap event here
+          },
+          child: GridTile(
+            footer: GridTileBar(
+              backgroundColor: Colors.black54.withOpacity(0.3),
+              title: Text(items[index].title),
+              subtitle: Text('Rp${items[index].price}'),
+            ),
+            child: Image.network(
+              items[index].image,
+              fit: BoxFit.cover,
+            ),
           ),
-          child: Image.network(items[index].image, fit: BoxFit.cover,),
         );
       },
     );
