@@ -6,8 +6,8 @@ class CatalogItem {
   final String image;
   final String title;
   final int price;
-
-  CatalogItem({required this.image, required this.title, required this.price});
+  final String description;
+  CatalogItem({required this.image, required this.title, required this.price, required this.description});
 }
 
 class CatalogGrid extends StatelessWidget {
