@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kasir_warjo/app/modules/catalog_page/views/catalog_detail.dart';
-
+enum Category {semua, makanan, minuman}
 class CatalogItem {
   final String image;
   final String title;
   final int price;
   final String description;
-  CatalogItem({required this.image, required this.title, required this.price, required this.description});
+  final  Category category;
+  
+    CatalogItem({required this.image, required this.title, required this.price,required this.category, required this.description});
 }
 
 class CatalogGrid extends StatelessWidget {
@@ -30,7 +32,7 @@ class CatalogGrid extends StatelessWidget {
            
                Get.to(() => CatalogDetail(item: items[index]));
            
-            // Handle your tap event here
+   
           },
           child: GridTile(
             footer: GridTileBar(
